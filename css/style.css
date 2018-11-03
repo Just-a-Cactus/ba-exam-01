@@ -4,6 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -331,8 +332,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
   /* 2 */
 }
 
@@ -542,10 +541,23 @@ body, html {
   width: 8.3333%;
 }
 
+@font-face {
+  font-family: 'Aleo';
+  src: local("Aleo"), local("Aleo"), url("../fonts/aleo-regular-webfont.woff2") format("woff2"), url("../fonts/aleo-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font: 400 16px/1.6 'Josefin Sans', sans-serif;
+  color: #e8e8e8;
+  border: 15px solid white;
+}
+
 /* Layout */
 .ba-container {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
   max-width: 1200px;
 }
 
@@ -576,6 +588,333 @@ select {
   -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
   -o-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
   transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.ba-search {
+  background: #5474fd url(../img/main_img.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  padding-top: 266px;
+}
+
+.ba-search-title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ba-search-title-box__main-title {
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1;
+  min-width: 100%;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.ba-search-title-box__sub-title {
+  font-size: 22px;
+  min-width: 100%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  margin-bottom: 42px;
+}
+
+.ba-search__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: -1px;
+  padding-bottom: 117px;
+}
+
+.ba-search__form input {
+  height: 60px;
+  width: 500px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #999999;
+}
+
+.ba-search__form input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.ba-search__form input::-moz-placeholder {
+  color: #999999;
+}
+
+.ba-search__form input:-ms-input-placeholder {
+  color: #999999;
+}
+
+.ba-search__form button {
+  font-family: Aleo;
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 60px;
+  padding: 2px 0 0 35px;
+  position: relative;
+  text-align: left;
+  width: 150px;
+  border: 2px solid white;
+  background-color: #5474fd;
+  letter-spacing: 0.06em;
+  -webkit-transition: padding-left .3s ease-in, font-size .3s ease-in, background-color .3s ease-in;
+  -o-transition: padding-left .3s ease-in, font-size .3s ease-in, background-color .3s ease-in;
+  transition: padding-left .3s ease-in, font-size .3s ease-in, background-color .3s ease-in;
+}
+
+.ba-search__form button:hover {
+  padding-left: 15px;
+  font-size: 18px;
+  background-color: #496bfe;
+}
+
+.ba-search__form button:hover svg {
+  width: 30px;
+  height: 30px;
+}
+
+.ba-search__form button svg {
+  position: absolute;
+  right: 8%;
+  top: 25%;
+  width: 26px;
+}
+
+.ba-search__scroll {
+  display: block;
+  padding-bottom: 16px;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  padding-left: 3px;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: font-size .3s ease-in;
+  -o-transition: font-size .3s ease-in;
+  transition: font-size .3s ease-in;
+}
+
+.ba-search__scroll:hover {
+  font-size: 16px;
+}
+
+.ba-search__scroll svg {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 9px);
+}
+
+.ba-header {
+  background-color: #5474fd;
+  text-transform: uppercase;
+  padding: 21px 0;
+}
+
+.ba-header-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  letter-spacing: 0.075em;
+  margin-left: -2px;
+}
+
+.ba-header-box a {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ba-header__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 9px;
+}
+
+.ba-header__list li a {
+  font-family: Aleo;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+.ba-header__list li a:hover {
+  color: orange;
+}
+
+.ba-header__list :nth-last-child(1) {
+  padding-left: 22px;
+}
+
+.ba-header__list :nth-last-child(2) {
+  padding-left: 24px;
+}
+
+.ba-header__list :nth-last-child(3) {
+  padding-left: 21px;
+}
+
+.ba-why-choose-us {
+  background: url(../img/why.jpg) no-repeat;
+  padding-top: 120px;
+}
+
+.ba-why-choose-us-text {
+  padding-top: 80px;
+  padding-bottom: 42px;
+}
+
+.ba-why-choose-us-text h3 {
+  font-family: Aleo;
+  font-size: 36px;
+  line-height: 1;
+  padding-bottom: 60px;
+  color: white;
+}
+
+.ba-why-choose-us-text p {
+  letter-spacing: 0.035em;
+}
+
+.ba-why-choose-us-text p + p {
+  padding-top: 30px;
+}
+
+.ba-dual-button {
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-family: Aleo;
+  text-decoration: none;
+  text-transform: uppercase;
+  min-width: 225px;
+  position: relative;
+  left: -1px;
+  min-height: 60px;
+  background-color: #5474fd;
+  letter-spacing: 0.065em;
+}
+
+.ba-row-image1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 64px;
+  padding-bottom: 5px;
+}
+
+.ba-row-image2 {
+  text-align: right;
+  padding-right: 1px;
+  padding-bottom: 110px;
+}
+
+.ba-ssb {
+  background-color: #333333;
+  padding-top: 95px;
+  padding-bottom: 115px;
+}
+
+.ba-ssb-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ba-ssb-row__cell + .ba-ssb-row__cell {
+  padding-left: 170px;
+}
+
+.ba-ssb-row__cell p {
+  font-family: Aleo;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.ba-flex-svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.ba-spain1 {
+  padding-top: 229px;
+  padding-bottom: 100px;
+  background: url(../img/spain1.jpg);
+}
+
+.ba-black-box {
+  background-color: rgba(35, 35, 35, 0.9);
+  padding: 43px 0 50px 30px;
+}
+
+.ba-black-box p {
+  letter-spacing: -0.066em;
+  line-height: 1.68;
+  padding-bottom: 41px;
+}
+
+.ba-black-box p:first-of-type {
+  letter-spacing: normal;
+  font-size: 20px;
+  padding-bottom: 19px;
+  line-height: 1.6;
+}
+
+.ba-black-box p:nth-last-of-type(2) {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+  letter-spacing: -0.05em;
+  padding-bottom: 15px;
+  line-height: 1.6;
+}
+
+.ba-spain2 {
+  padding-top: 229px;
+  padding-bottom: 100px;
+  background: url(../img/spain2.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */
