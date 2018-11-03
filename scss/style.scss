@@ -297,6 +297,10 @@ p {
 	min-height: 60px;
 	background-color: $blue;
 	letter-spacing: 0.065em;
+
+	&:hover {
+		background-color: $dark-blue;
+	}
 }
 
 .ba-row-image1 {

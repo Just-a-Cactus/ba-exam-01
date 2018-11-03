@@ -830,6 +830,10 @@ p {
   letter-spacing: 0.065em;
 }
 
+.ba-dual-button:hover {
+  background-color: #496bfe;
+}
+
 .ba-row-image1 {
   display: -webkit-box;
   display: -ms-flexbox;
