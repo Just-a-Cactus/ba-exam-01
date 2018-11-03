@@ -789,6 +789,7 @@ p {
 
 .ba-why-choose-us {
   background: url(../img/why.jpg) no-repeat;
+  background-size: cover;
   padding-top: 120px;
 }
 
@@ -881,7 +882,8 @@ p {
 .ba-spain1 {
   padding-top: 229px;
   padding-bottom: 100px;
-  background: url(../img/spain1.jpg);
+  background: url(../img/spain1.jpg) no-repeat;
+  background-size: cover;
 }
 
 .ba-black-box {
@@ -912,9 +914,9 @@ p {
 }
 
 .ba-spain2 {
+  background-size: contain;
   padding-top: 229px;
   padding-bottom: 100px;
-  background: url(../img/spain2.jpg);
+  background: url(../img/spain2.jpg) no-repeat;
+  background-size: cover;
 }
-
-/*# sourceMappingURL=style.css.map */
