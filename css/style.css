@@ -832,6 +832,8 @@ p {
 
 .ba-dual-button:hover {
   background-color: #496bfe;
+  -webkit-box-shadow: 0 0 5px 5px white;
+  box-shadow: 0 0 5px 5px white;
 }
 
 .ba-row-image1 {
